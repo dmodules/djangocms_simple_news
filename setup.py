@@ -1,22 +1,55 @@
-import os
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""The setup script."""
+
 from setuptools import setup, find_packages
 
-def read(fname):
-    # read the contents of a text file
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+with open('README.rst') as readme_file:
+    readme = readme_file.read()
 
-os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+with open('HISTORY.rst') as history_file:
+    history = history_file.read()
+
+requirements = ['Click>=6.0', ]
+
+setup_requirements = [ ]
+
+test_requirements = [ ]
 
 setup(
-    name='djangocms_partners',
-    version='0.5',
-    packages=find_packages(),
+    author="D-Modules",
+    author_email='info@d-modules.com',
+    classifiers=[
+        'Development Status :: 2 - Pre-Alpha',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'Natural Language :: English',
+        "Programming Language :: Python :: 2",
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+    ],
+    description="Python Boilerplate contains all the boilerplate you need to create a Python package.",
+    entry_points={
+        'console_scripts': [
+            'djangocms_simple_news=djangocms_simple_news.cli:main',
+        ],
+    },
+    install_requires=requirements,
+    license="GNU General Public License v3",
+    long_description=readme + '\n\n' + history,
     include_package_data=True,
-    license='BSD 3-Clause "New" or "Revised" License',
-    description='show parteners',
-    long_description=read('README.md'),
-    url='https://github.com/dmodules/djangocms_partners',
-    author='D-Modules',
-    install_requires=["django>=1.8"],
-    author_email='support@d-modules.com',
+    keywords='djangocms_simple_news',
+    name='djangocms_simple_news',
+    packages=find_packages(include=['djangocms_simple_news']),
+    setup_requires=setup_requirements,
+    test_suite='tests',
+    tests_require=test_requirements,
+    url='https://github.com/dmodules/djangocms_simple_news',
+    version='0.1.0',
+    zip_safe=False,
 )
