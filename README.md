@@ -13,7 +13,7 @@ Choose a site you want to install the add-on to from the dashboard. Then go to `
 
 Redeploy the site.
 
-Manuall Installation
+Manual Installation
 --------------------
 
 Run ``pip install djangocms_simple_news``.
