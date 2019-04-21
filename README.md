@@ -30,6 +30,5 @@ Add below apps to ``INSTALLED_APPS``: ::
 Features
 ********
 
-
 * Add, Edit, Delete news with django admin
 * Show news in templates with templates tags
