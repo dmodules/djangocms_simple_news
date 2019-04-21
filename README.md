@@ -1,4 +1,3 @@
-===============
 DJANGOCMS Simple news
 ===============
 
