@@ -1,4 +1,4 @@
-Djangocms Simple news
+DjangoCMS Simple news
 ===============
 
 Djangocms simpe news is a very basic news application.
