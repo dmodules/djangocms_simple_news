@@ -1,7 +1,7 @@
 include LICENSE.txt
 include README.rst
-recursive-include djangocms_partners/migrations *
-recursive-include djangocms_partners/locale *
-recursive-include djangocms_partners/templates *
-recursive-include djangocms_planning/templatetags *
+recursive-include djangocms_simple_news/migrations *
+recursive-include djangocms_simple_news/locale *
+recursive-include djangocms_simple_news/templates *
+recursive-include djangocms_simple_news/templatetags *
 recursive-exclude * *.pyc

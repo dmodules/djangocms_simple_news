@@ -26,6 +26,13 @@ Add below apps to ``INSTALLED_APPS``: ::
         …
     ]
 
+run python manage.py migrate djangocms_simple_news
+
+Configuration
+-------------
+TO do!
+
+
 ********
 Features
 ********
