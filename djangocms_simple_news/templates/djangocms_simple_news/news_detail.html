@@ -1,0 +1,17 @@
+{% load cms_tags %}
+{% load thumbnail %}
+{% load i18n %}
+
+
+{% with simplenews as sn %}
+<div class="news-detail">
+    <h3 class="news-title">{{sn.title}}<h3>
+    {% if sn.image %}
+        <img src="{% thumbnail sn.image 400x400 crop %}" alt="{{sn.title}}">
+    {% endif %}
+    <span class="news-pub-date">{{sn.pub_date}}</span>
+    <div class="news-content">{{sn.description|safe}}</div>
+</div>
+{% endwith %}
+
+
