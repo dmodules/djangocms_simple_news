@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* D-Modules <info@d-modules.com>
+* D-Modules <info@d-modules.com> https://www.d-modules.com
 
 Contributors
 ------------
