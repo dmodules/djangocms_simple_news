@@ -22,7 +22,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: dmodules
   password:
-    secure: PLEASE_REPLACE_ME
+    secure: dmodules987
   on:
     tags: true
     repo: dmodules/djangocms_simple_news

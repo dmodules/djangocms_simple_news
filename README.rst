@@ -16,8 +16,7 @@ djangocms_simple_news
 
 
 
-Python Boilerplate contains all the boilerplate you need to create a Python package.
-
+Djangocms simpe news is a very basic news application.
 
 * Free software: GNU General Public License v3
 * Documentation: https://djangocms-simple-news.readthedocs.io.
@@ -26,7 +25,8 @@ Python Boilerplate contains all the boilerplate you need to create a Python pack
 Features
 --------
 
-* TODO
+* Add, Edit, Delete news with django admin
+* Show news in templates with templates tags
 
 Credits
 -------
