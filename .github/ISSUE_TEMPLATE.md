@@ -1,4 +1,5 @@
 * djangocms_simple_news version:
+* Django version:
 * Python version:
 * Operating System:
 

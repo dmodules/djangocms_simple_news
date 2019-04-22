@@ -1,29 +1,24 @@
 # Config file for automatic testing at travis-ci.org
 
 language: python
+
 python:
-  - 3.6
-  - 3.5
-  - 3.4
-  - 2.7
+  - "3.6"
 
-# Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -U tox-travis
+env: 
+  - TOX_ENV=py36-django-111
+  - TOX_ENV=py35-django-111
+  - TOX_ENV=py34-django-111
+  - TOX_ENV=py27-django-111
 
-# Command to run tests, e.g. python setup.py test
-script: tox
+matrix:
+  fast_finish: true
 
-# Assuming you have installed the travis-ci CLI tool, after you
-# create the Github repo and add it to Travis, run the
-# following command to finish PyPI deployment setup:
-# $ travis encrypt --add deploy.password
-deploy:
-  provider: pypi
-  distributions: sdist bdist_wheel
-  user: dmodules
-  password:
-    secure: dmodules987
-  on:
-    tags: true
-    repo: dmodules/djangocms_simple_news
-    python: 3.6
+# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+install: pip install -r requirements_test.txt
+
+# command to run tests using coverage, e.g. python setup.py test
+script: tox -e $TOX_ENV
+
+after_success:
+  - codecov -e TOX_ENV
